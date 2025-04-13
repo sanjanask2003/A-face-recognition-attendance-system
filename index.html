@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Broad</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div class="a1">
+        <div class="column">
+            <div class="todo">
+                <h2>To Do(<span id="todo-count">0</span>)</h2>
+                <div class="tasks" id="todo-tasks"></div>
+                <input type="text" class="task-input" id="todo-input" placeholder="Add Tasks">
+                <button class="add-task" onclick="addtask('todo')">Add Tasks</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="doing">
+                <h2>Doing(<span id="doing-count">0</span>)</h2>
+                <div class="tasks" id="doing-tasks"></div>
+                <input type="text" class="task-input" id="doing-input" placeholder="Add Tasks">
+                <button class="add-task" onclick="addtask('doing')">Add Tasks</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="done">
+                <h2>Done(<span id="done-count">0</span>)</h2>
+                <div class="tasks" id="done-tasks"></div>
+                <input type="text" class="task-input" id="done-input" placeholder="Add Tasks">
+                <button class="add-task" onclick="addtask('done')">Add Tasks</button>
+            </div>
+        </div>
+    </div>
+    <div id="contextMenu" class="context-menu">
+        <ul>
+          <li onclick="editTask()">Edit</li>
+          <li onclick="deleteTask()">Delete</li>
+        </ul>
+      </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
